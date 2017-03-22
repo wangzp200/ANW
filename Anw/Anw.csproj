@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E273D09-15C9-43B9-BDBE-61066613EA80}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Anw</RootNamespace>
+    <AssemblyName>Anw</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SAPBusinessOneSDK">
+      <HintPath>..\..\SAPBusinessOneSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HttpUtils\CsharpHttpHelper.BaseBll\HttpHelperBll.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Base\HttphelperBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Enum\AType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Enum\PostDataType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Enum\ResultCookieType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Enum\ResultType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Helper\Base64Helper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Helper\EncodingHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Helper\ExecJsHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Helper\HtmlHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Helper\HttpCookieHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Helper\HttpUrlHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Helper\ImageHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Helper\JsonHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Helper\MD5Helper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Item\AItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Item\ImgItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper.Static\RegexString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper\HttpHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper\HttpItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpUtils\CsharpHttpHelper\HttpResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="lib\AccessToken.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="lib\Globle.cs" />
+    <Compile Include="lib\LogHelper.cs" />
+    <Compile Include="Model\Customer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="lib\SapDIHelper.cs" />
+    <Compile Include="lib\ServiceTools.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\log4net.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
